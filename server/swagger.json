@@ -1,0 +1,25 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Crypto Data",
+    "description": "",
+    "version": "0.1"
+  },
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/data/best": {
+      "get": {
+        "x-swagger-router-controller": "",
+        "operationId": "impossible",
+        "tags": [
+          "/data"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    }
+  }
+}

@@ -1,4 +1,8 @@
 const express = require('express')
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
 const cors = require('cors');
 const morgan = require('morgan')
 const {best} = require('./utils/BestProfit');
@@ -27,6 +31,8 @@ app.use(cors({
   credentials: true,
 }));
 app.use(morgan('tiny'))
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 const port = 3030
 
 const maxQuotes = 3000
