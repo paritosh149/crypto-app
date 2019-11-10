@@ -5,7 +5,7 @@ Frontend was bootstrapped with [Create React App](https://github.com/facebook/cr
 Backend is contained in `server` folder and is Node-Express based. It also contains Swagger UI for <br/>
 refering API documentation.
 
-![UI screenshot](public/Screenshot.png)
+![UI screenshot](public/Screenshot.PNG)
 
 ## Available Scripts
 
