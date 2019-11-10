@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
 import { fetchItems } from './actions/actions'
@@ -6,9 +7,12 @@ import { fetchItems } from './actions/actions'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
-import ProfitDisplayBox from './components/ProfitDisplayBox'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
+
+import ProfitDisplayBox from './components/ProfitDisplayBox'
+
+import ItemType from './PropTypes/Item.proptype'
 
 export class App extends React.Component {
     render() {
@@ -30,6 +34,13 @@ export class App extends React.Component {
         )
     }
 }
+
+App.propTypes = {
+    isFetching: PropTypes.bool,
+    fetchItems: PropTypes.func,
+    items: PropTypes.arrayOf(ItemType)
+}
+
 function mapStateToProps(state) {
     const { isFetching, items } = state || {
         isFetching: true,
