@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "server": "node ./server/index.js",
-    "server:test": "mocha ./server/test"
+    "server:test": "mocha ./server/test",
+    "lint": "node ./node_modules/eslint/bin/eslint.js src/**/*.js --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,6 +45,7 @@
     "chai": "^4.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
+    "eslint": "^6.6.0",
     "mocha": "^6.2.2"
   }
 }

@@ -1,23 +1,23 @@
 import {
-  REQUEST_DATA,
-  RECEIVE_DATA
+    REQUEST_DATA,
+    RECEIVE_DATA
 } from '../actions/actions'
 
 function itemReducer(
-  state = {
-    isFetching: false,
-    items: []
-  },
-  action
+    state = {
+        isFetching: false,
+        items: []
+    },
+    action
 ) {
-  switch (action.type) {
+    switch (action.type) {
     case REQUEST_DATA:
-      return {...state, isFetching: true }
+        return {...state, isFetching: true }
     case RECEIVE_DATA:
-      return {...state, isFetching: false, items: action.items}
+        return {...state, isFetching: false, items: action.items}
     default:
-      return state
-  }
+        return state
+    }
 }
 
 export default itemReducer
