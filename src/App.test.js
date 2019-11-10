@@ -1,6 +1,6 @@
 import React from 'react';
 import { App } from './App';
-import { shallow } from 'enzyme';
+// import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import { createMount } from '@material-ui/core/test-utils';
 import Button from '@material-ui/core/Button';
@@ -8,10 +8,8 @@ import Button from '@material-ui/core/Button';
 describe('App Component', () => {
   let props;
   let mount;
-  // let shallow;
 
   beforeAll(() => {
-    // shallow = createShallow();
     mount = createMount();
     props = {
       items: [],
