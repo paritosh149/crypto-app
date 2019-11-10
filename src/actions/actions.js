@@ -1,3 +1,5 @@
+import { DATA_URL } from '../config/config'
+
 export const REQUEST_DATA = 'REQUEST_DATA'
 export const RECEIVE_DATA = 'RECEIVE_DATA'
 export const RECEIVE_ERROR = 'RECEIVE_ERROR'
@@ -29,10 +31,10 @@ export function closeError() {
     }
 }
 
-function fetchData() {
+export function fetchData() {
     return dispatch => {
         dispatch(requestData())
-        return fetch('http://localhost:3030/data/best')
+        return fetch(DATA_URL)
             .then(response => response.json())
             .then(json => dispatch(receiveData(json)))
             .catch(error => {

@@ -3,7 +3,10 @@ import Grid from '@material-ui/core/Grid'
 import { DateTime } from 'luxon'
 import PropTypes from 'prop-types'
 
+import { TIME_FORMAT } from '../../config/config'
+
 export default function Ticker(props) {
+
     return (
         <Grid item xs={6}>
             <b>{props.title}</b>
@@ -11,7 +14,7 @@ export default function Ticker(props) {
             {props.symbol}
             {props.price}
             <br />
-            {DateTime.fromISO(props.time).toFormat('hh:mm a')}
+            {DateTime.fromISO(props.time).toFormat(TIME_FORMAT)}
         </Grid>
     )
 }

@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography'
 
 import { DateTime } from 'luxon'
 
+import { DATE_FORMAT } from '../../config/config'
+
 import Ticker from '../Ticker/Ticker'
 
 import ItemProptype from '../../PropTypes/Item.proptype'
@@ -35,7 +37,7 @@ export default function ProfitDisplayBox(props) {
             <Card className={classes.card}>
                 <CardContent>
                     <Typography color="textSecondary" gutterBottom>
-                        {DateTime.fromISO(props.item.date).toFormat('dd-LLL-yy')}
+                        {DateTime.fromISO(props.item.date).toFormat(DATE_FORMAT)}
                     </Typography>
                     <Typography className={classes.pos} color="textPrimary">
                         {props.item.currency}
