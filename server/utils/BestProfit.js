@@ -13,7 +13,7 @@ function isValidTime(inputStr){
 function isValidTick(dataItem){
 	return (dataItem && isValidTime(dataItem.time) && !isNaN(dataItem.price));
 }
-function Best(dataArr){
+function best(dataArr){
 	// TODO: sort the items by time
 	let result = void 0;
 	const capacity = dataArr.length;
@@ -44,4 +44,4 @@ function Best(dataArr){
 	return result;
 }
 
-module.exports = Best;
+module.exports = {isValidTick, isValidTime, best};

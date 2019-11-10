@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component renders without crashing 1`] = `
+<div
+  className="MuiContainer-root MuiContainer-maxWidthXs"
+>
+  <div
+    className="MuiBox-root MuiBox-root-9"
+  >
+    <h4
+      className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
+    >
+      Crypto Best Profit Finder
+    </h4>
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+      disabled={false}
+      onBlur={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        Fetch Data
+      </span>
+    </button>
+    <br />
+     
+    <br />
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+    />
+  </div>
+</div>
+`;

@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors');
 const morgan = require('morgan')
-const best = require('./utils/BestProfit');
+const {best} = require('./utils/BestProfit');
 const fs = require('fs');
 const luxon = require('luxon');
 
