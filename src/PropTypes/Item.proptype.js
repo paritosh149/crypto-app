@@ -7,6 +7,6 @@ export default PropTypes.shape({
     best: PropTypes.shape({
         buy: TickerType,
         sell: TickerType,
-        profit: PropTypes.string
+        profit: PropTypes.number
     })
 })

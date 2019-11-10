@@ -28,44 +28,42 @@ const useStyles = makeStyles({
     },
 })
 
-export default class ProfitDisplayBox extends React.PureComponent {
-    render() {
-        const classes = useStyles()
-        return (
-            <Grid item>
-                <Card className={classes.card}>
-                    <CardContent>
-                        <Typography color="textSecondary" gutterBottom>
-                            {DateTime.fromISO(this.props.item.date).toFormat('dd-LLL-yy')}
-                        </Typography>
-                        <Typography className={classes.pos} color="textPrimary">
-                            {this.UNSAFE_componentWillUpdateprops.item.currency}
-                        </Typography>
-                        <Grid container spacing={3}>
-                            <Ticker
-                                title={'Buy'}
-                                symbol={'$'}
-                                time={this.props.item.best.buy.time}
-                                price={this.props.item.best.buy.price}
-                            />
-                            <Ticker
-                                title={'Sell'}
-                                symbol={'$'}
-                                time={this.props.item.best.sell.time}
-                                price={this.props.item.best.sell.price}
-                            />
-                            <br />
-                            <Grid item xs={12}>
-                                <Typography color="textPrimary">
-                  Profit ${props.item.best.profit}
-                                </Typography>
-                            </Grid>
+export default function ProfitDisplayBox(props) {
+    const classes = useStyles()
+    return (
+        <Grid item>
+            <Card className={classes.card}>
+                <CardContent>
+                    <Typography color="textSecondary" gutterBottom>
+                        {DateTime.fromISO(props.item.date).toFormat('dd-LLL-yy')}
+                    </Typography>
+                    <Typography className={classes.pos} color="textPrimary">
+                        {props.item.currency}
+                    </Typography>
+                    <Grid container spacing={3}>
+                        <Ticker
+                            title={'Buy'}
+                            symbol={'$'}
+                            time={props.item.best.buy.time}
+                            price={props.item.best.buy.price}
+                        />
+                        <Ticker
+                            title={'Sell'}
+                            symbol={'$'}
+                            time={props.item.best.sell.time}
+                            price={props.item.best.sell.price}
+                        />
+                        <br />
+                        <Grid item xs={12}>
+                            <Typography color="textPrimary">
+                Profit ${props.item.best.profit}
+                            </Typography>
                         </Grid>
-                    </CardContent>
-                </Card>
-            </Grid>
-        )
-    }
+                    </Grid>
+                </CardContent>
+            </Card>
+        </Grid>
+    )
 }
 
 ProfitDisplayBox.propTypes = {
