@@ -1,4 +1,4 @@
-const ALLOWED_ORIGINS = ['http://localhost:3000'];
+const ALLOWED_ORIGINS = ['*'];
 
 const CORS_CONFIG = {
 
@@ -19,6 +19,6 @@ const CORS_CONFIG = {
   credentials: true,
 }
 
-const PORT = 3030
+const PORT = 80
 
 module.exports = { CORS_CONFIG, PORT }
