@@ -61,7 +61,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "mocha": "^6.2.2",
+    "mocha": "^11.7.5",
     "redux-mock-store": "^1.5.3"
   },
   "lint-staged": {
